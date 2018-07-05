@@ -2,7 +2,6 @@ package com.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +16,7 @@ public class Demo2Application {
 	String home(){
 		Map<String,String> map = new HashMap<String,String>();
 		map.put("1","1");
-		Assert.isNull(map,"empty"); //isNull 等于 Assert.notNull()
+		//Assert.isNull(map,"empty"); //isNull 等于 Assert.notNull()
 		return "Hello World";
 	}
 

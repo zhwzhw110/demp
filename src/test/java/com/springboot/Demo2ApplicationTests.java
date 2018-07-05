@@ -41,6 +41,7 @@ public class Demo2ApplicationTests {
 
 	@Test
 	public void controllerTest() throws  Exception{
+		//对Controller进行测试，如果测试地址为/ 就执行MockMvcResultHandlers.print() 然后Expect期望 看是否为200请求成功
 		mockMvc.perform(MockMvcRequestBuilders.get("/")).andDo(MockMvcResultHandlers.print())
 		.andExpect(MockMvcResultMatchers.status().isOk());
 
